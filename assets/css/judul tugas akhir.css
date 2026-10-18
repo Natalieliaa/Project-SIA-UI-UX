@@ -1,0 +1,412 @@
+
+/* HALAMAN JUDUL TUGAS AKHIR */
+
+.judulta-page {
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px;
+}
+
+.judulta-heading {
+  margin-bottom: 25px;
+}
+
+.judulta-back {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.judulta-heading h1 {
+  color: #172554;
+  margin: 14px 0 10px;
+  font-size: 28px;
+}
+
+.judulta-heading p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.judulta-panel,
+.judulta-stat {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.judulta-panel {
+  padding: 24px;
+  margin-bottom: 22px;
+}
+
+.judulta-panel-title h2,
+.judulta-results-heading h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.judulta-panel-title p,
+.judulta-results-heading p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* FILTER */
+
+.judulta-filter {
+  display: grid;
+  grid-template-columns:
+    minmax(160px, 1fr)
+    minmax(230px, 2fr)
+    auto auto;
+  align-items: end;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.judulta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.judulta-field label {
+  font-size: 12px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.judulta-field input,
+.judulta-field select {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 0 13px;
+  background: white;
+  font: inherit;
+  font-size: 13px;
+  color: #334155;
+  outline: none;
+}
+
+.judulta-field input:focus,
+.judulta-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.judulta-primary,
+.judulta-secondary {
+  border: none;
+  border-radius: 9px;
+  height: 45px;
+  padding: 0 19px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.judulta-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.judulta-primary:hover {
+  background: #1d4ed8;
+}
+
+.judulta-secondary {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.judulta-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* STATISTIK */
+
+.judulta-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.judulta-stat {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 22px;
+}
+
+.judulta-stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: #dbeafe;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.judulta-stat p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 7px;
+}
+
+.judulta-stat strong {
+  display: block;
+  font-size: 28px;
+  color: #172554;
+}
+
+/* TABEL */
+
+.judulta-result-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.judulta-results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 24px;
+}
+
+.judulta-counter {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 9px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.judulta-table-scroll {
+  overflow-x: auto;
+}
+
+.judulta-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 760px;
+}
+
+.judulta-table th {
+  padding: 17px 20px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.judulta-table td {
+  padding: 19px 20px;
+  font-size: 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.judulta-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.judulta-nim {
+  color: #2563eb;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.judulta-name {
+  color: #172554;
+  font-weight: 600;
+}
+
+.judulta-title {
+  color: #334155;
+  line-height: 1.7;
+  min-width: 260px;
+}
+
+.judulta-detail-btn {
+  color: #2563eb;
+  background: #eff6ff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 13px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.judulta-detail-btn:hover {
+  background: #dbeafe;
+}
+
+.judulta-empty {
+  text-align: center;
+  padding: 35px !important;
+  color: #64748b;
+}
+
+.judulta-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 24px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.judulta-pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.judulta-pagination button {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: #334155;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.judulta-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.judulta-notice {
+  background: #eff6ff;
+  padding: 18px;
+  border-radius: 10px;
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* MODAL DETAIL */
+
+.judulta-dialog {
+  width: calc(100% - 32px);
+  max-width: 560px;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 0;
+  color: #172554;
+}
+
+.judulta-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.judulta-dialog-heading,
+.judulta-dialog-footer {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.judulta-dialog-heading {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.judulta-dialog-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.judulta-dialog-heading button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.judulta-dialog-content {
+  padding: 24px;
+}
+
+.judulta-detail-row {
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.judulta-detail-row span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 7px;
+}
+
+.judulta-detail-row strong {
+  font-size: 13px;
+  color: #172554;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.judulta-dialog-footer {
+  justify-content: flex-end;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .judulta-filter {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .judulta-page {
+    padding: 20px;
+  }
+
+  .judulta-heading h1 {
+    font-size: 23px;
+  }
+
+  .judulta-summary,
+  .judulta-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .judulta-results-heading,
+  .judulta-table-footer {
+    flex-wrap: wrap;
+  }
+
+  .judulta-empty {
+  text-align: center;
+  padding: 65px 20px !important;
+  color: #64748b;
+  font-size: 13px;
+  background: #fff;
+}
+}

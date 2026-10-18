@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judul Tugas Akhir | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/judul tugas akhir.css">
+  <script src="../assets/js/judul tugas akhir.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span> Daftar Konseling
+      </a>
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span> E-KTM
+      </a>
+      <a href="judul tugas akhir.html" class="nav-link active"
+         aria-current="page">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span> LPKP
+      </a>
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+
+    <header class="topbar">
+      <button class="menu-button" id="menuButton"
+        type="button" aria-label="Buka menu"
+        aria-controls="sidebar" aria-expanded="false">☰</button>
+
+      <div class="header-title">
+        <h2>Judul Tugas Akhir</h2>
+        <p>Dashboard / Akademik / Judul Tugas Akhir</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content judulta-page">
+
+      <section class="judulta-heading">
+        <div>
+          <a class="judulta-back" href="dashboard.html">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Katalog Judul Tugas Akhir</h1>
+          <p>
+            Temukan referensi penelitian dan eksplorasi
+            judul tugas akhir mahasiswa.
+          </p>
+        </div>
+      </section>
+
+      <!-- FILTER PENCARIAN -->
+      <section class="judulta-panel">
+        <div class="judulta-panel-title">
+          <div>
+            <h2>🔎 Pencarian Judul</h2>
+            <p>Gunakan kata kunci untuk menemukan penelitian.</p>
+          </div>
+        </div>
+
+        <form id="searchForm" class="judulta-filter">
+          <div class="judulta-field">
+            <label for="prodiFilter">Program Studi</label>
+            <select id="prodiFilter">
+              <option value="Informatika">Informatika</option>
+              <option value="Semua">Semua Program Studi</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+            </select>
+          </div>
+
+          <div class="judulta-field">
+            <label for="keywordInput">Cari Judul</label>
+            <input type="search" id="keywordInput"
+              placeholder="Contoh: Time Series, Machine Learning...">
+          </div>
+
+          <button type="submit" class="judulta-primary">
+            Cari Judul
+          </button>
+
+          <button type="button" id="resetSearch"
+            class="judulta-secondary">
+            Reset
+          </button>
+        </form>
+      </section>
+
+      <!-- RINGKASAN -->
+      <section class="judulta-summary">
+        <article class="judulta-stat">
+          <span class="judulta-stat-icon">📚</span>
+          <div>
+            <p>Total Judul Tersedia</p>
+            <strong id="totalTitles">0</strong>
+          </div>
+        </article>
+
+        <article class="judulta-stat">
+          <span class="judulta-stat-icon">🔍</span>
+          <div>
+            <p>Hasil Pencarian</p>
+            <strong id="searchResults">0</strong>
+          </div>
+        </article>
+      </section>
+
+      <!-- TABEL -->
+      <section class="judulta-panel judulta-result-panel">
+        <div class="judulta-results-heading">
+          <div>
+            <h2>Daftar Judul Tugas Akhir</h2>
+            <p id="resultDescription">
+              Menampilkan judul tugas akhir mahasiswa.
+            </p>
+          </div>
+          <span class="judulta-counter" id="resultCount">0 Judul</span>
+        </div>
+
+        <div class="judulta-table-scroll">
+          <table class="judulta-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>NIM</th>
+                <th>Nama Mahasiswa</th>
+                <th>Judul Tugas Akhir</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody id="judulTableBody">
+              <tr>
+                <td colspan="5" class="judulta-empty">
+                  Memuat judul tugas akhir...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="judulta-table-footer">
+          <span id="tableSummary">Menampilkan 0 judul</span>
+          <div class="judulta-pagination">
+            <button id="prevPage" type="button">← Sebelumnya</button>
+            <span id="pageInfo">1 / 1</span>
+            <button id="nextPage" type="button">Berikutnya →</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik USD
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<!-- DETAIL MODAL -->
+<dialog id="judulDialog" class="judulta-dialog">
+  <div class="judulta-dialog-heading">
+    <h2>Detail Tugas Akhir</h2>
+    <button id="closeDialog" type="button"
+      aria-label="Tutup">✕</button>
+  </div>
+
+  <div id="judulDetail" class="judulta-dialog-content"></div>
+
+  <div class="judulta-dialog-footer">
+    <button id="closeDialogFooter" type="button"
+      class="judulta-primary">Tutup</button>
+  </div>
+</dialog>
+
+</body>
+</html>

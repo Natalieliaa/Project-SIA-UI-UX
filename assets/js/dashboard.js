@@ -13,7 +13,7 @@ const schedules = {
   Senin: [
     {
       time: "10:00 - 12:00",
-      name: "Probabilitas",
+      name: "Probabilitas Lanjut",
       code: "MATS21W",
       room: "Lab Jaringan Komputer",
       className: "B"
@@ -23,7 +23,7 @@ const schedules = {
   Selasa: [
     {
       time: "11:00 - 13:00",
-      name: "Nutrisi",
+      name: "Neurasetika",
       code: "NUTR054",
       room: "L.PBIO 1",
       className: "A"
@@ -57,7 +57,7 @@ const schedules = {
     },
     {
       time: "13:00 - 16:00",
-      name: "Algoritma dan Pemrograman Komputer",
+      name: "AI Generatif",
       code: "GEA151P",
       room: "Lab Jaringan Komputer",
       className: "A"

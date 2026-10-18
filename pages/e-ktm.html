@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-KTM | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/e-ktm.css">
+  <script src="../assets/js/e-ktm.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span> Daftar Konseling
+      </a>
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+      <a href="e-ktm.html" class="nav-link active"
+         aria-current="page">
+        <span>▣</span> E-KTM
+      </a>
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span> LPKP
+      </a>
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-area">
+
+    <header class="topbar">
+      <button id="menuButton" class="menu-button"
+        type="button" aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="sidebar">☰</button>
+
+      <div class="header-title">
+        <h2>E-KTM Digital</h2>
+        <p>Dashboard / Akademik / E-KTM</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content ektm-page">
+      <section class="ektm-heading">
+        <div>
+          <a href="dashboard.html" class="ektm-back">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Kartu Tanda Mahasiswa Elektronik</h1>
+        </div>
+
+        <button type="button" id="printCard"
+          class="ektm-primary">
+          ↓ Cetak / Simpan PDF
+        </button>
+      </section>
+
+
+      <!-- KARTU DAN QR -->
+      <section class="ektm-layout">
+
+        <div class="ektm-panel">
+          <div class="ektm-panel-header">
+            <div>
+              <p>E-KTM Universitas Sanata Dharma</p>
+
+          <div class="ektm-card-wrapper">
+            <article class="ektm-card" id="studentCard">
+
+              <div class="ektm-pattern pattern-top"></div>
+              <div class="ektm-pattern pattern-bottom"></div>
+
+              <!-- BRAND -->
+              <div class="ektm-card-header">
+                <div class="ektm-logo">
+                  <img src="../assets/images/logo-kampus.png"
+                    alt="Logo Universitas"
+                    id="campusLogo">
+                  <span id="logoFallback" hidden>🎓</span>
+                </div>
+
+                <div class="ektm-university">
+                  <span>e-KTM</span>
+                  <h2>UNIVERSITAS<br>SANATA DHARMA</h2>
+                  <small>Cerdas Humanis</small>
+                </div>
+              </div>
+
+              <!-- IDENTITAS -->
+              <div class="ektm-card-main">
+                <div class="ektm-identity">
+                  <h3 id="cardName">
+                    YUSTINA NATALIE SHEILLA PURNAMAWATI
+                  </h3>
+
+                  <div class="ektm-identity-details">
+                    <p>NIM: <strong id="cardNim">235314102</strong></p>
+                    <p>S1 - <strong>Informatika</strong></p>
+                  </div>
+                </div>
+
+                <div class="ektm-photo">
+                  <img src="../assets/images/foto-profil.jpg"
+                    alt="Foto mahasiswa" id="studentPhoto">
+                  <div class="ektm-photo-fallback"
+                    id="photoFallback" hidden>
+                    <span>👤</span>
+                    <small>Foto Mahasiswa</small>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+          </div>
+        </div>
+
+        <!-- QR DEMO -->
+        <div class="ektm-panel ektm-qr-panel">
+          <div class="ektm-panel-header">
+            <div>
+              <h2>QR Code Mahasiswa</h2>
+              <p>Simulasi tampilan QR digital</p>
+            </div>
+          </div>
+
+          <div class="ektm-qr-container">
+            <div class="ektm-qr-placeholder">
+              <div class="ektm-qr-graphic">
+                <span class="qr-corner top-left"></span>
+                <span class="qr-corner top-right"></span>
+                <span class="qr-corner bottom-left"></span>
+                <span class="qr-demo-text">DEMO</span>
+              </div>
+            </div>
+
+            <h3>QR Code E-KTM</h3>
+            <p>
+              Area QR sebagai simulasi fitur
+              identifikasi mahasiswa.
+            </p>
+
+            <span class="ektm-qr-badge">
+              Tidak dapat dipindai
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFORMASI -->
+      <section class="ektm-info-panel">
+        <div class="ektm-section-heading">
+          <h2>Informasi Mahasiswa</h2>
+          <p>Informasi yang ditampilkan pada kartu digital.</p>
+        </div>
+
+        <div class="ektm-info-grid">
+          <div>
+            <span>Nama Lengkap</span>
+            <strong>Yustina Natalie Sheilla Purnamawati</strong>
+          </div>
+          <div>
+            <span>NIM</span>
+            <strong>235314102</strong>
+          </div>
+          <div>
+            <span>Jenjang Pendidikan</span>
+            <strong>S1</strong>
+          </div>
+          <div>
+            <span>Program Studi</span>
+            <strong>Informatika</strong>
+          </div>
+          <div>
+            <span>Universitas</span>
+            <strong>Universitas Sanata Dharma</strong>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik USD
+      </footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>

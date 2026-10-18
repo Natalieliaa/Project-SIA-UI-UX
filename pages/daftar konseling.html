@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Konseling | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/daftar konseling.css">
+  <script src="../assets/js/daftar konseling.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+      <a href="daftar konseling.html" class="nav-link active"
+         aria-current="page">
+        <span>♧</span> Daftar Konseling
+      </a>
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span> E-KTM
+      </a>
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span> LPKP
+      </a>
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <button id="menuButton" class="menu-button"
+        type="button" aria-label="Buka menu"
+        aria-controls="sidebar" aria-expanded="false">☰</button>
+
+      <div class="header-title">
+        <h2>Daftar Konseling</h2>
+        <p>Dashboard / Konseling</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content konseling-page">
+
+      <section class="konseling-heading">
+        <div>
+          <a href="dashboard.html" class="konseling-back">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Daftar Konseling</h1>
+          <p>Kelola pengajuan dan riwayat konseling akademik.</p>
+        </div>
+        <button id="addCounseling" type="button"
+          class="konseling-primary">
+          + Ajukan Konseling
+        </button>
+      </section>
+
+      <section class="konseling-stats">
+        <article class="konseling-stat">
+          <div class="konseling-stat-icon blue">📋</div>
+          <div>
+            <p>Total Konseling</p>
+            <strong id="totalCounseling">0</strong>
+            <small>Seluruh pengajuan</small>
+          </div>
+        </article>
+
+        <article class="konseling-stat">
+          <div class="konseling-stat-icon yellow">🕒</div>
+          <div>
+            <p>Jadwal Mendatang</p>
+            <strong id="upcomingCounseling">0</strong>
+            <small>Pengajuan terjadwal</small>
+          </div>
+        </article>
+
+        <article class="konseling-stat">
+          <div class="konseling-stat-icon green">✓</div>
+          <div>
+            <p>Konseling Selesai</p>
+            <strong id="completedCounseling">0</strong>
+            <small>Telah dilaksanakan</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="konseling-panel">
+        <div class="konseling-panel-heading">
+          <div>
+            <h2>Riwayat & Pengajuan Konseling</h2>
+            <p>Daftar permohonan konseling mahasiswa.</p>
+          </div>
+        </div>
+
+        <div class="konseling-filters">
+          <div class="konseling-field">
+            <label for="searchCounseling">Cari Konseling</label>
+            <input type="search" id="searchCounseling"
+              placeholder="Cari topik atau nama dosen...">
+          </div>
+          <div class="konseling-field">
+            <label for="statusFilter">Status</label>
+            <select id="statusFilter">
+              <option value="Semua">Semua Status</option>
+              <option value="Menunggu">Menunggu</option>
+              <option value="Terjadwal">Terjadwal</option>
+              <option value="Selesai">Selesai</option>
+              <option value="Dibatalkan">Dibatalkan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="konseling-table-scroll">
+          <table class="konseling-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Topik Konseling</th>
+                <th>Dosen Pembimbing</th>
+                <th>Tanggal & Waktu</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="counselingTableBody">
+              <tr><td colspan="6" class="konseling-empty">
+                Memuat data konseling...
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="konseling-table-footer">
+          <span id="counselingCount">0 konseling</span>
+          <span>Semester Gasal 2026/2027</span>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik USD
+      </footer>
+    </main>
+  </div>
+</div>
+
+<!-- MODAL PENGAJUAN -->
+<dialog class="konseling-dialog" id="formDialog">
+  <div class="konseling-dialog-heading">
+    <h2>Ajukan Konseling Baru</h2>
+    <button type="button" class="dialog-close"
+      data-close="formDialog" aria-label="Tutup">✕</button>
+  </div>
+
+  <form id="counselingForm" class="konseling-form">
+    <div class="konseling-field">
+      <label for="topic">Topik Konseling</label>
+      <input id="topic" type="text" maxlength="100"
+        placeholder="Contoh: Konsultasi rencana studi" required>
+    </div>
+
+    <div class="konseling-field">
+      <label for="lecturer">Dosen Pembimbing</label>
+      <input id="lecturer" type="text" maxlength="100"
+        placeholder="Masukkan nama dosen" required>
+    </div>
+
+    <div class="konseling-form-grid">
+      <div class="konseling-field">
+        <label for="date">Tanggal Pengajuan Konseling</label>
+        <input id="date" type="date" required>
+      </div>
+      <div class="konseling-field">
+        <label for="time">Waktu yang Diusulkan</label>
+        <input id="time" type="time" required>
+      </div>
+    </div>
+
+    <div class="konseling-field">
+      <label for="description">Keterangan</label>
+      <textarea id="description" rows="4"
+        maxlength="500"
+        placeholder="Jelaskan hal yang ingin dikonsultasikan..."
+        required></textarea>
+    </div>
+
+    <div class="konseling-dialog-actions">
+      <button type="button" class="konseling-secondary"
+        data-close="formDialog">Batal</button>
+      <button type="submit" class="konseling-primary">
+        Kirim Pengajuan
+      </button>
+    </div>
+  </form>
+</dialog>
+
+<!-- MODAL DETAIL -->
+<dialog class="konseling-dialog" id="detailDialog">
+  <div class="konseling-dialog-heading">
+    <h2>Detail Konseling</h2>
+    <button type="button" class="dialog-close"
+      data-close="detailDialog" aria-label="Tutup">✕</button>
+  </div>
+  <div id="counselingDetail" class="konseling-detail"></div>
+  <div class="konseling-dialog-actions">
+    <button type="button" class="konseling-secondary"
+      data-close="detailDialog">Tutup</button>
+  </div>
+</dialog>
+
+</body>
+</html>
