@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SISTEM INFORMASI AKADEMIK USD</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+  <div class="login-card">
+
+    <h2>SIA Kampus</h2>
+    <p class="subtitle">Sistem Informasi Akademik</p>
+
+    <form id="loginForm">
+      <label for="nim">NIM</label>
+      <input
+        type="text"
+        id="nim"
+        placeholder="Masukkan NIM"
+        required
+      >
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Masukkan password"
+        required
+      >
+
+      <button type="submit">Masuk</button>
+      <p id="errorMessage" class="error"></p>
+    </form>
+
+    <p class="footer">© 2026 SISTEM INFORMASI AKADEMIK USD</p>
+  </div>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
