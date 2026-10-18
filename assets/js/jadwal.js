@@ -9,7 +9,7 @@ const courses = [
     start: 10,
     end: 12,
     code: "MATS21W",
-    name: "Probabilitas",
+    name: "Probabilitas Lanjut",
     room: "Lab Jaringan Komputer",
     className: "B",
     color: "blue"
@@ -19,7 +19,7 @@ const courses = [
     start: 11,
     end: 13,
     code: "NUTR054",
-    name: "Nutrisi",
+    name: "Neurasetika",
     room: "L.PBIO 1",
     className: "A",
     color: "green"
@@ -59,7 +59,7 @@ const courses = [
     start: 13,
     end: 16,
     code: "GEA151P",
-    name: "Algoritma dan Pemrograman Komputer",
+    name: "AI Generatif",
     room: "Lab Jaringan Komputer",
     className: "A",
     color: "teal"

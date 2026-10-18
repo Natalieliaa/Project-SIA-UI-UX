@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Rencana Studi | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/daftar rencana studi.css">
+  <script src="../assets/js/daftar rencana studi.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR: 8 MENU -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span> Daftar Konseling
+      </a>
+      <a href="daftar rencana studi.html"
+         class="nav-link active" aria-current="page">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span> E-KTM
+      </a>
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span> LPKP
+      </a>
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <!-- KONTEN UTAMA -->
+  <div class="main-area">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton"
+        type="button" aria-label="Buka menu"
+        aria-controls="sidebar" aria-expanded="false">☰</button>
+
+      <div class="header-title">
+        <h2>Daftar Rencana Studi</h2>
+        <p>Dashboard / Akademik / Rencana Studi</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content drs-page">
+
+      <!-- JUDUL -->
+      <section class="drs-page-heading">
+        <div>
+          <a class="drs-back" href="dashboard.html">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Daftar Rencana Studi</h1>
+          <p>Pantau mata kuliah dan beban studi setiap semester.</p>
+        </div>
+
+        <button class="drs-primary-btn" id="printDRS" type="button">
+          ↓ Cetak / Simpan PDF
+        </button>
+      </section>
+
+      <!-- PROFIL -->
+      <section class="drs-student">
+        <div class="drs-student-avatar">🎓</div>
+
+        <div class="drs-student-info">
+          <span class="drs-overline">INFORMASI MAHASISWA</span>
+          <h2>Yustina Natalie Sheilla Purnamawati</h2>
+          <div class="drs-student-meta">
+            <span>NIM: 235314102</span>
+            <span>Program Studi Informatika</span>
+            <span>2026/2027 Gasal</span>
+          </div>
+        </div>
+
+        <span class="drs-active-badge">
+          <span class="drs-dot"></span> Mahasiswa Aktif
+        </span>
+      </section>
+
+      <!-- STATISTIK -->
+      <section class="drs-stats" aria-label="Ringkasan studi">
+
+        <article class="drs-stat">
+          <div class="drs-stat-icon drs-blue">📚</div>
+          <div>
+            <p>Total Mata Kuliah</p>
+            <strong id="totalCourses">0</strong>
+            <small>Mata kuliah semester terpilih</small>
+          </div>
+        </article>
+
+        <article class="drs-stat">
+          <div class="drs-stat-icon drs-green">📊</div>
+          <div>
+            <p>Total SKS</p>
+            <strong id="totalSKS">0</strong>
+            <small>Beban studi semester</small>
+          </div>
+        </article>
+
+        <article class="drs-stat">
+          <div class="drs-stat-icon drs-purple">✓</div>
+          <div>
+            <p>Mata Kuliah Disetujui</p>
+            <strong id="approvedCourses">0</strong>
+            <small>Status persetujuan studi</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- FILTER -->
+      <section class="drs-panel drs-filter-panel">
+        <div class="drs-panel-heading">
+          <h2>Filter Rencana Studi</h2>
+          <p>Pilih semester atau cari mata kuliah.</p>
+        </div>
+
+        <div class="drs-filter-grid">
+          <div class="drs-field">
+            <label for="semesterFilter">Semester Akademik</label>
+            <select id="semesterFilter">
+              <option value="2026-gasal">2026/2027 - Gasal</option>
+              <option value="2025-genap">2025/2026 - Genap</option>
+              <option value="2025-gasal">2025/2026 - Gasal</option>
+            </select>
+          </div>
+
+          <div class="drs-field">
+            <label for="courseSearch">Cari Mata Kuliah</label>
+            <input id="courseSearch" type="search"
+              placeholder="Cari nama, kode, atau kelas...">
+          </div>
+
+          <button class="drs-reset" id="resetFilter" type="button">
+            Reset Filter
+          </button>
+        </div>
+      </section>
+
+      <!-- TABEL -->
+      <section class="drs-panel drs-table-panel">
+        <div class="drs-table-heading">
+          <div>
+            <h2>Daftar Mata Kuliah</h2>
+            <p id="semesterLabel">Semester Gasal 2026/2027</p>
+          </div>
+          <span class="drs-count" id="courseCount">0 Mata Kuliah</span>
+        </div>
+
+        <div class="drs-table-scroll">
+          <table class="drs-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Kode</th>
+                <th>Mata Kuliah</th>
+                <th>SKS</th>
+                <th>Kelas</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="courseTableBody">
+              <tr>
+                <td colspan="7" class="drs-empty">
+                  Memuat data mata kuliah...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="drs-table-footer">
+          <span id="tableInfo">Menampilkan 0 mata kuliah</span>
+          <strong id="footerSKS">Total: 0 SKS</strong>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik USD
+      </footer>
+    </main>
+  </div>
+</div>
+
+<!-- MODAL DETAIL -->
+<dialog id="courseDialog" class="drs-dialog">
+  <div class="drs-dialog-heading">
+    <h2>Detail Mata Kuliah</h2>
+    <button type="button" id="closeDialog" aria-label="Tutup">✕</button>
+  </div>
+  <div class="drs-dialog-content" id="courseDetail"></div>
+  <div class="drs-dialog-actions">
+    <button type="button" id="closeDialogFooter">Tutup</button>
+  </div>
+</dialog>
+
+</body>
+</html>

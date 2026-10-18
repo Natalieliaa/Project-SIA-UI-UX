@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPKP | SIA Kampus</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/lpkp.css">
+  <script src="../assets/js/lpkp.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span> Daftar Konseling
+      </a>
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span> E-KTM
+      </a>
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+      <a href="lpkp.html" class="nav-link active" aria-current="page">
+        <span>▥</span> LPKP
+      </a>
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-area">
+    <header class="topbar">
+      <button id="menuButton" class="menu-button"
+        type="button" aria-label="Buka menu"
+        aria-expanded="false" aria-controls="sidebar">☰</button>
+
+      <div class="header-title">
+        <h2>LPKP</h2>
+        <p>Dashboard / Akademik / LPKP</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content lpkp-page">
+
+      <!-- HEADING -->
+      <section class="lpkp-heading">
+        <div>
+          <a href="dashboard.html" class="lpkp-back">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Laporan Pelaksanaan Kegiatan Perkuliahan</h1>
+          <p>Pantau jumlah pertemuan dan persentase kehadiran
+             selama satu semester.</p>
+        </div>
+
+        <button id="printLPKP" class="lpkp-print" type="button">
+          ↓ Cetak / Simpan PDF
+        </button>
+      </section>
+
+      <!-- FILTER -->
+      <section class="lpkp-panel lpkp-filter-panel">
+        <div class="lpkp-panel-header">
+          <div>
+            <h2>Filter Laporan</h2>
+            <p>Pilih tahun akademik dan semester untuk menampilkan laporan.</p>
+          </div>
+        </div>
+
+        <form id="lpkpForm" class="lpkp-filters">
+          <div class="lpkp-field">
+            <label for="academicYear">Tahun Akademik</label>
+            <select id="academicYear">
+              <option value="2026">2026/2027</option>
+              <option value="2025">2025/2026</option>
+            </select>
+          </div>
+
+          <div class="lpkp-field">
+            <label for="semester">Semester</label>
+            <select id="semester">
+              <option value="Gasal">Gasal</option>
+              <option value="Genap">Genap</option>
+            </select>
+          </div>
+
+          <button type="submit" class="lpkp-primary">
+            Tampilkan
+          </button>
+        </form>
+      </section>
+
+      <!-- REPORT: MUNCUL SETELAH TAMPILKAN -->
+      <div id="reportContent" hidden>
+
+        <section class="lpkp-stats">
+          <article class="lpkp-stat">
+            <div class="lpkp-stat-icon blue">📚</div>
+            <div>
+              <p>Total Mata Kuliah</p>
+              <strong id="totalCourses">0</strong>
+              <small>Mata kuliah pada laporan</small>
+            </div>
+          </article>
+
+          <article class="lpkp-stat">
+            <div class="lpkp-stat-icon green">✓</div>
+            <div>
+              <p>Rata-rata Kehadiran</p>
+              <strong id="averageAttendance">0%</strong>
+              <small>Dari seluruh pertemuan selesai</small>
+            </div>
+          </article>
+
+          <article class="lpkp-stat">
+            <div class="lpkp-stat-icon purple">📅</div>
+            <div>
+              <p>Total Kehadiran</p>
+              <strong id="totalAttendance">0</strong>
+              <small id="attendanceSubtitle">Dari 0 pertemuan</small>
+            </div>
+          </article>
+        </section>
+
+        <!-- TABEL -->
+        <section class="lpkp-panel lpkp-table-panel">
+          <div class="lpkp-table-heading">
+            <div>
+              <h2>Rekap Kehadiran Perkuliahan</h2>
+              <p id="reportPeriod"></p>
+            </div>
+            <span class="lpkp-count" id="courseCount">0 Mata Kuliah</span>
+          </div>
+
+          <div class="lpkp-table-scroll">
+            <table class="lpkp-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Program Studi</th>
+                  <th>Kode MK</th>
+                  <th>Nama Mata Kuliah</th>
+                  <th>Kelas</th>
+                  <th>Pertemuan Selesai</th>
+                  <th>Jumlah Kehadiran</th>
+                  <th>% Kehadiran</th>
+                </tr>
+              </thead>
+              <tbody id="lpkpTableBody"></tbody>
+            </table>
+          </div>
+
+          <div class="lpkp-table-footer">
+            <span id="tableInfo">0 mata kuliah</span>
+            <span id="reportSummary">Laporan Kehadiran</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <section id="emptyState" class="lpkp-panel lpkp-empty-state">
+        <div class="lpkp-empty-icon">📋</div>
+        <h2>Laporan Belum Ditampilkan</h2>
+        <p>Pilih tahun akademik dan semester, kemudian klik
+           tombol Tampilkan untuk melihat rekap kehadiran.</p>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik USD
+      </footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>
