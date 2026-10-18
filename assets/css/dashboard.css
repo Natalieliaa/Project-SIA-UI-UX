@@ -667,4 +667,15 @@ button {
   .day-tabs button {
     font-size: 11px;
   }
+
+  .schedule-link {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.schedule-link:hover {
+  text-decoration: underline;
+}
 }
