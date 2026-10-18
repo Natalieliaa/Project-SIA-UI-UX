@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Kuliah | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/jadwal.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+      <a href="dashboard.html" class="nav-link">
+        <span>⌂</span> Dashboard
+      </a>
+
+        <a href="jadwal.html" class="nav-link active">
+            <span>📅</span>
+            Jadwal
+        </a>
+
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span> Daftar Konseling
+      </a>
+
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span> Daftar Rencana Studi
+      </a>
+
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span> E-KTM
+      </a>
+
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span> Judul Tugas Akhir
+      </a>
+
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span> LPKP
+      </a>
+
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span> Nilai
+      </a>
+
+      <a href="poin.html" class="nav-link">
+        <span>☆</span> Poin
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">↪ Logout</a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <button id="menuButton" class="menu-button"
+        aria-label="Buka menu" aria-expanded="false"
+        aria-controls="sidebar">☰</button>
+
+      <div class="header-title">
+        <h2>Jadwal Kuliah</h2>
+        <p>Dashboard / Jadwal Kuliah</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="content jadwal-page">
+
+      <div class="jadwal-heading">
+        <div>
+          <a href="dashboard.html" class="back-link">
+            ← Kembali ke Dashboard
+          </a>
+          <h1>Jadwal Perkuliahan</h1>
+          <p>Kelola dan lihat jadwal kuliah semester aktif.</p>
+        </div>
+        <button class="download-btn" id="printSchedule">
+          ↓ Cetak / Simpan PDF
+        </button>
+      </div>
+
+      <section class="jadwal-info">
+        <div>
+          <span class="info-label">TAHUN AKADEMIK</span>
+          <strong>2026 / 2027 Gasal</strong>
+        </div>
+        <div>
+          <span class="info-label">PROGRAM STUDI</span>
+          <strong>Informatika</strong>
+        </div>
+        <div>
+          <span class="info-label">HARI KULIAH</span>
+          <strong>Senin – Jumat</strong>
+        </div>
+      </section>
+
+      <section class="panel jadwal-panel">
+
+<div class="jadwal-toolbar">
+  <div>
+    <h2>Kalender Perkuliahan</h2>
+    <p>Jadwal tetap Semester Gasal 2026/2027</p>
+  </div>
+
+  <span class="semester-badge">
+    Semester Gasal
+  </span>
+</div>
+
+        <div class="view-controls">
+          <button class="view-btn active" data-view="calendar">
+            Kalender
+          </button>
+          <button class="view-btn" data-view="list">
+            Daftar
+          </button>
+        </div>
+
+        <div class="calendar-scroll" id="calendarView">
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+
+        <div id="listView" class="list-view" hidden></div>
+      </section>
+
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/jadwal.js"></script>
+</body>
+</html>
