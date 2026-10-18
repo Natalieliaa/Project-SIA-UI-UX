@@ -1,64 +1,385 @@
 
-<aside class="sidebar" id="sidebar">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="brand">
-    <div class="brand-logo">🎓</div>
-    <div>
-      <h2>SIA Kampus</h2>
-      <small>Portal Mahasiswa</small>
+  <title>Dashboard | SIA Kampus</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <div>
+        <h2>SIA Kampus</h2>
+        <small>Portal Mahasiswa</small>
+      </div>
     </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+
+    <nav class="navigation" aria-label="Navigasi utama">
+
+      <!-- 1. Dashboard -->
+      <a href="dashboard.html" class="nav-link active"
+         aria-current="page">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <!-- 2. Daftar Konseling -->
+      <a href="daftar konseling.html" class="nav-link">
+        <span>♧</span>
+        Daftar Konseling
+      </a>
+
+      <!-- 3. Daftar Rencana Studi -->
+      <a href="daftar rencana studi.html" class="nav-link">
+        <span>▤</span>
+        Daftar Rencana Studi
+      </a>
+
+      <!-- 4. E-KTM -->
+      <a href="e-ktm.html" class="nav-link">
+        <span>▣</span>
+        E-KTM
+      </a>
+
+      <!-- 5. Judul Tugas Akhir -->
+      <a href="judul tugas akhir.html" class="nav-link">
+        <span>📖</span>
+        Judul Tugas Akhir
+      </a>
+
+      <!-- 6. LPKP -->
+      <a href="lpkp.html" class="nav-link">
+        <span>▥</span>
+        LPKP
+      </a>
+
+      <!-- 7. Nilai -->
+      <a href="nilai.html" class="nav-link">
+        <span>📊</span>
+        Nilai
+      </a>
+
+      <!-- 8. Poin -->
+      <a href="poin.html" class="nav-link">
+        <span>☆</span>
+        Poin
+      </a>
+
+    </nav>
+
+    <!-- Logout dipisah dari menu utama -->
+    <div class="sidebar-footer">
+      <a href="../index.html" class="logout">
+        ↪ Logout
+      </a>
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="main-area">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+      <button
+        id="menuButton"
+        class="menu-button"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+        ☰
+      </button>
+
+      <div class="header-title">
+        <h2>Dashboard</h2>
+        <p>Sistem Informasi Akademik</p>
+      </div>
+
+      <div class="user-profile">
+        <div class="avatar">M</div>
+
+        <div class="user-info">
+          <strong>Mahasiswa</strong>
+          <small>Informatika</small>
+        </div>
+      </div>
+
+    </header>
+
+
+    <main class="content">
+
+      <!-- WELCOME BANNER -->
+      <section class="welcome-banner">
+
+        <div>
+          <p>Selamat Datang 👋</p>
+
+          <h1>Dashboard Mahasiswa</h1>
+
+          <span>
+            Kelola informasi dan aktivitas akademik
+            dengan mudah dalam satu tempat.
+          </span>
+        </div>
+
+        <div class="welcome-icon">🎓</div>
+
+      </section>
+
+
+      <!-- INFORMASI MAHASISWA -->
+      <section class="student-card">
+
+        <div>
+          <p class="eyebrow">INFORMASI AKADEMIK</p>
+
+          <h2>Semester Gasal 2026/2027</h2>
+
+          <p>Program Studi Informatika</p>
+        </div>
+
+        <span class="status-badge">
+          Semester Aktif
+        </span>
+
+      </section>
+
+
+      <!-- RINGKASAN AKADEMIK -->
+      <section class="summary-grid">
+
+        <article class="stat-card">
+
+          <div class="stat-icon blue">📚</div>
+
+          <div>
+            <p>Mata Kuliah</p>
+            <h2>7</h2>
+            <small>Terjadwal minggu ini</small>
+          </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <div class="stat-icon green">📅</div>
+
+          <div>
+            <p>Hari Perkuliahan</p>
+            <h2>5</h2>
+            <small>Senin - Jumat</small>
+          </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <div class="stat-icon purple">🎓</div>
+
+          <div>
+            <p>Program Studi</p>
+            <h2 class="stat-text">Informatika</h2>
+            <small>Informasi program studi</small>
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <!-- DASHBOARD GRID -->
+      <div class="dashboard-grid">
+
+        <!-- JADWAL KULIAH -->
+        <section class="panel" id="jadwal">
+
+          <div class="section-heading">
+
+            <div>
+              <h2>📅 Jadwal Kuliah</h2>
+              <p>Ringkasan jadwal perkuliahan mingguan</p>
+            </div>
+
+          </div>
+
+
+          <!-- PILIHAN HARI -->
+          <div class="day-tabs" id="dayTabs">
+
+            <button type="button" data-day="Senin" class="selected">
+              Sen
+            </button>
+
+            <button type="button" data-day="Selasa">
+              Sel
+            </button>
+
+            <button type="button" data-day="Rabu">
+              Rab
+            </button>
+
+            <button type="button" data-day="Kamis">
+              Kam
+            </button>
+
+            <button type="button" data-day="Jumat">
+              Jum
+            </button>
+
+            <button type="button" data-day="Sabtu">
+              Sab
+            </button>
+
+          </div>
+
+          <!-- Jadwal diisi JavaScript -->
+          <div id="scheduleList" class="schedule-list">
+            <p class="empty-state">Memuat jadwal...</p>
+          </div>
+
+        </section>
+
+
+        <!-- PENGUMUMAN -->
+        <section class="panel announcements">
+
+          <div class="section-heading">
+
+            <div>
+              <h2>📢 Pengumuman Kampus</h2>
+              <p>Informasi terbaru untuk mahasiswa</p>
+            </div>
+
+          </div>
+
+
+          <article class="announcement">
+
+            <span class="tag important">Penting</span>
+
+            <h3>Pengembalian Buku Perpustakaan</h3>
+
+            <p>
+              Mahasiswa yang masih memiliki pinjaman buku
+              di perpustakaan dimohon untuk segera melakukan
+              pengembalian atau perpanjangan sesuai ketentuan.
+            </p>
+
+          </article>
+
+
+          <article class="announcement">
+
+            <span class="tag academic">Akademik</span>
+
+            <h3>Pengeditan Data Mahasiswa</h3>
+
+            <p>
+              Seluruh mahasiswa wajib melengkapi data diri
+              pada sistem akademik untuk keperluan
+              pelaporan data PDDIKTI.
+            </p>
+
+          </article>
+
+
+          <article class="announcement">
+
+            <span class="tag finance">Keuangan</span>
+
+            <h3>Dispensasi Pembayaran Uang Kuliah</h3>
+
+            <p>
+              Informasi mengenai pengajuan dispensasi
+              pembayaran uang kuliah dapat diperoleh
+              melalui bagian administrasi kampus.
+            </p>
+
+          </article>
+
+        </section>
+
+      </div>
+
+
+      <!-- MENU CEPAT -->
+      <section class="panel quick-section">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>⚡ Akses Cepat</h2>
+            <p>Akses layanan akademik yang sering digunakan</p>
+          </div>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+          <a href="daftar rencana studi.html" class="quick-card">
+            <span>📋</span>
+            <strong>Rencana Studi</strong>
+            <small>Pengisian mata kuliah</small>
+          </a>
+
+
+          <a href="nilai.html" class="quick-card">
+            <span>📊</span>
+            <strong>Nilai</strong>
+            <small>Lihat hasil studi</small>
+          </a>
+
+
+          <a href="e-ktm.html" class="quick-card">
+            <span>🪪</span>
+            <strong>E-KTM</strong>
+            <small>Kartu mahasiswa digital</small>
+          </a>
+
+
+          <a href="daftar konseling.html" class="quick-card">
+            <span>💬</span>
+            <strong>Konseling</strong>
+            <small>Layanan konseling</small>
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        © 2026 SIA Kampus — Sistem Informasi Akademik
+      </footer>
+
+    </main>
+
   </div>
 
-  <p class="menu-label">MENU UTAMA</p>
+</div>
 
-  <nav class="navigation" aria-label="Navigasi utama">
+<script src="../assets/js/dashboard.js"></script>
 
-    <a href="dashboard.html" class="nav-link active">
-      <span>⌂</span>
-      Dashboard
-    </a>
-
-    <a href="daftar konseling.html" class="nav-link">
-      <span>♧</span>
-      Daftar Konseling
-    </a>
-
-    <a href="daftar rencana studi.html" class="nav-link">
-      <span>▤</span>
-      Daftar Rencana Studi
-    </a>
-
-    <a href="e-ktm.html" class="nav-link">
-      <span>▣</span>
-      E-KTM
-    </a>
-
-    <a href="judul tugas akhir.html" class="nav-link">
-      <span>📖</span>
-      Judul Tugas Akhir
-    </a>
-
-    <a href="lpkp.html" class="nav-link">
-      <span>▥</span>
-      LPKP
-    </a>
-
-    <a href="nilai.html" class="nav-link">
-      <span>📊</span>
-      Nilai
-    </a>
-
-    <a href="poin.html" class="nav-link">
-      <span>☆</span>
-      Poin
-    </a>
-
-  </nav>
-
-  <div class="sidebar-footer">
-    <a href="../index.html" class="logout">
-      ↪ Logout
-    </a>
-  </div>
-
-</aside>
+</body>
+</html>
