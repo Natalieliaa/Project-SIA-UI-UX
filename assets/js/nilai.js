@@ -489,8 +489,7 @@ function renderChart() {
   chart.appendChild(svg);
 
   $("#chartNote").textContent =
-    "Grafik menampilkan semester yang datanya tersedia " +
-    "(Semester 1–3). Data semester berikutnya belum dimasukkan.";
+    "Grafik menampilkan rekap semester dari data";
 }
 
 // ======================================
