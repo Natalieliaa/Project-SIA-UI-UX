@@ -70,23 +70,50 @@ const semesters = [
   {
     number: 4,
     period: "2024/2025 Genap",
-    ips: null,
-    sks: null,
-    courses: []
+    ips: 3.45,
+    sks: 23,
+    courses: [
+      ["INFO113", "Analisis dan Strategi Algoritma", 3, "A-", 3.70, 3.39],
+      ["INFO116", "Manajemen Informasi", 3, "A", 3.85, 3.43],
+      ["INFO114", "Komputasi Paralel dan Terdistribusi", 3, "B+", 3.60, 3.42],
+      ["RPLN105", "Interaksi Manusia dan Komputer", 3, "A", 3.75, 3.45],
+      ["RPLN103", "Pemrograman Berbasis Platform", 3, "B+", 3.50, 3.45],
+      ["INFO115", "Pembelajaran Mesin", 1, "A-", 3.70, 3.46],
+      ["RPLN104", "Rekayasa Perangkat Lunak", 3, "B+", 3.55, 3.45],
+      ["WPSB 042", "Workshop Pengembangan Sarana Pembelajaran Biologi", 2, "A", 3.80, 3.46],
+    ]
   },
   {
     number: 5,
     period: "2025/2026 Gasal",
-    ips: null,
-    sks: null,
-    courses: []
+    ips: 3.50,
+    sks: 23,
+    courses: [
+      ["KEWR101", "Kewirausahaan", 3, "A", 3.85, 3.47],
+      ["KBTE053", "Kajian Budidaya Tumbuhan Eksotis", 3, "A-", 3.75, 3.48],
+      ["INFO118", "Proyek Informatika", 3, "A-", 3.70, 3.49],
+      ["INTS209", "Gudang Data", 3, "A", 3.90, 3.50],
+      ["INTS202", "Pemerolehan Informasi", 3, "B+", 3.60, 3.50],
+      ["INTS201", "Penambangan Data", 1, "A", 3.85, 3.51],
+      ["SDEV204", "Algoritma Optimisasi", 3, "B+", 3.55, 3.51],
+      ["INFO117", "Kriptografi", 2, "A-", 3.70, 3.51],
+      ["SDEV203", "Sistem Pendukung Pengambilan Keputusan", 2, "B+", 3.60, 3.50]
+    ]
   },
   {
     number: 6,
     period: "2025/2026 Genap",
-    ips: null,
-    sks: null,
-    courses: []
+    ips: 3.52,
+    sks: 21,
+    courses: [
+      ["COM 543", "Augmented Reality", 3, "A-", 3.75, 3.51],
+      ["STDL101", "Kuliah Kerja Nyata", 3, "A", 3.85, 3.52],
+      ["INTS110", "Sistem Rekomendasi", 3, "A-", 3.70, 3.52],
+      ["INTS204", "Pemrosesan Bahasa Alami (NLP)", 3, "A", 3.90, 3.53],
+      ["INMA109", "Analisis Proses Bisnis", 3, "B+", 3.60, 3.53],
+      ["INTS203", "Pemrosesan Citra", 3, "A-", 3.75, 3.53],
+      ["INMA108", "Kecerdasan Bisnis", 3, "B+", 3.60, 3.53],
+    ]
   },
   {
     number: 7,
@@ -95,13 +122,6 @@ const semesters = [
     sks: null,
     courses: []
   },
-  {
-    number: 8,
-    period: "2026/2027 Genap",
-    ips: null,
-    sks: null,
-    courses: []
-  }
 ];
 
 // ======================================
