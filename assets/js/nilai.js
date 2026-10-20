@@ -3,13 +3,10 @@
 // DATA NILAI AKADEMIK
 // ======================================
 
-// Data semester 1-3 berdasarkan screenshot SIA.
-// SWTS dan Evaluasi menggunakan modal simulasi.
-
 const academicSummary = {
-  ipk: 3.39,
+  ipk: 3.01,
   totalCredits: 129,
-  passedCredits: 129
+  passedCredits: 119
 };
 
 // Format course:
@@ -19,7 +16,7 @@ const semesters = [
   {
     number: 1,
     period: "2023/2024 Gasal",
-    ips: 3.10,
+    ips: 2.99,
     sks: 20,
     courses: [
       ["PPKMB 001", "Pendampingan Mahasiswa Baru 1", 0, null, null, null],
@@ -28,7 +25,7 @@ const semesters = [
       ["MATE102", "Matematika Diskret", 3, "C", null, null],
       ["INFO102", "Sistem Digital", 2, "C+", null, null],
       ["INFO101", "Algoritma dan Pemrograman", 3, "B-", null, null],
-      ["TEOL 101", "Pendidikan Agama", 2, "A-", 3.71, 3.39],
+      ["TEOL 101", "Pendidikan Agama", 2, "A", 3.71, 3.39],
       ["BIND 101", "Bahasa Indonesia", 3, "A-", 3.53, 3.31],
       ["BING 101", "Bahasa Inggris", 3, "B+", 3.47, 3.52]
     ]
@@ -36,7 +33,7 @@ const semesters = [
   {
     number: 2,
     period: "2023/2024 Genap",
-    ips: 3.30,
+    ips: 3.09,
     sks: 21,
     courses: [
       ["MATE103", "Kalkulus", 3, "A-", 2.88, 2.92],
@@ -46,18 +43,18 @@ const semesters = [
       ["INFO106", "Pemrograman Analisis Data", 2, "A", 3.00, 3.10],
       ["INFO108", "Dasar Komunikasi Komputer dan Jaringan", 2, "B", 3.00, 3.22],
       ["MATE104", "Statistika dan Probabilitas", 3, "A", 3.00, 3.33],
-      ["INFO104", "Struktur Data Linier", 3, "A-", 3.00, 3.39],
-      ["FITE 107", "Teologi Moral", 2, "B+", 3.00, 3.14]
+      ["INFO104", "Struktur Data Linier", 3, "C+", 3.00, 3.39],
+      ["FITE 107", "Teologi Moral", 2, "D", 2.00, 3.14]
     ]
   },
   {
     number: 3,
     period: "2024/2025 Gasal",
-    ips: 3.48,
+    ips: 3.19,
     sks: 23,
     courses: [
       ["INFO109", "Struktur Data Non Linier", 3, "A-", 4.00, 3.40],
-      ["INFO110", "Pemrograman Berorientasi Objek Lanjut", 3, "A-", 3.00, 3.40],
+      ["INFO110", "Pemrograman Berorientasi Objek Lanjut", 3, "C+", 3.00, 2.83],
       ["INFO111", "Sistem Cerdas", 3, "B+", 3.00, 3.26],
       ["MATE105", "Aljabar Linier", 3, "A-", 3.00, 3.31],
       ["INFO112", "Internet dan Aplikasinya", 3, "B", 3.00, 3.27],
@@ -70,58 +67,67 @@ const semesters = [
   {
     number: 4,
     period: "2024/2025 Genap",
-    ips: 3.45,
-    sks: 23,
+    ips: 3.67,
+    sks: 18,
     courses: [
-      ["INFO113", "Analisis dan Strategi Algoritma", 3, "A-", 3.70, 3.39],
-      ["INFO116", "Manajemen Informasi", 3, "A", 3.85, 3.43],
-      ["INFO114", "Komputasi Paralel dan Terdistribusi", 3, "B+", 3.60, 3.42],
-      ["RPLN105", "Interaksi Manusia dan Komputer", 3, "A", 3.75, 3.45],
-      ["RPLN103", "Pemrograman Berbasis Platform", 3, "B+", 3.50, 3.45],
-      ["INFO115", "Pembelajaran Mesin", 1, "A-", 3.70, 3.46],
-      ["RPLN104", "Rekayasa Perangkat Lunak", 3, "B+", 3.55, 3.45],
-      ["WPSB 042", "Workshop Pengembangan Sarana Pembelajaran Biologi", 2, "A", 3.80, 3.46],
+      ["INFO113", "Analisis dan Strategi Algoritma", 3, "B", 3.00, 3.27],
+      ["INFO116", "Manajemen Informasi", 2, "A", 3.00, 3.26],
+      ["INFO114", "Komputasi Paralel dan Terdistribusi", 2, "A", 4.00, 3.27],
+      ["RPLN105", "Interaksi Manusia dan Komputer", 2, "A", 4.00, 3.44],
+      ["RPLN103", "Pemrograman Berbasis Platform", 3, "B+", 4.00, 3.27],
+      ["INFO115", "Pembelajaran Mesin", 3, "A-", 3.00, 3.24],
+      ["RPLN104", "Rekayasa Perangkat Lunak", 3, "A", 4.00, 3.39],
+      ["WPSB 042", "Workshop Pengembangan Sarana Pembelajaran Biologi", 2, null, 3.00, 3.26]
     ]
   },
   {
     number: 5,
     period: "2025/2026 Gasal",
-    ips: 3.50,
-    sks: 23,
+    ips: 2.45,
+    sks: 24,
     courses: [
-      ["KEWR101", "Kewirausahaan", 3, "A", 3.85, 3.47],
-      ["KBTE053", "Kajian Budidaya Tumbuhan Eksotis", 3, "A-", 3.75, 3.48],
-      ["INFO118", "Proyek Informatika", 3, "A-", 3.70, 3.49],
-      ["INTS209", "Gudang Data", 3, "A", 3.90, 3.50],
-      ["INTS202", "Pemerolehan Informasi", 3, "B+", 3.60, 3.50],
-      ["INTS201", "Penambangan Data", 1, "A", 3.85, 3.51],
-      ["SDEV204", "Algoritma Optimisasi", 3, "B+", 3.55, 3.51],
-      ["INFO117", "Kriptografi", 2, "A-", 3.70, 3.51],
-      ["SDEV203", "Sistem Pendukung Pengambilan Keputusan", 2, "B+", 3.60, 3.50]
+      ["KEWR101", "Kewirausahaan", 2, "B+", 3.00, 3.27],
+      ["KBTE 053", "Kajian Budidaya Tumbuhan Eksotis", 2, "E", 2.00, 3.50],
+      ["INFO118", "Proyek Informatika", 2, "B", 3.00, 3.44],
+      ["INTS209", "Gudang Data", 3, "E", 1.00, 2.99],
+      ["INTS202", "Pemerolehan Informasi", 3, "B+", 3.00, 3.38],
+      ["INTS201", "Penambangan Data", 3, "A-", 3.00, 3.64],
+      ["SDEV204", "Algoritma Optimisasi", 3, "B-", 2.00, 3.26],
+      ["INFO117", "Kriptografi", 3, "C", 3.00, 3.32],
+      ["SDEV203", "Sistem Pendukung Pengambilan Keputusan", 3, "A-", 3.00, 3.40]
     ]
   },
   {
     number: 6,
     period: "2025/2026 Genap",
-    ips: 3.52,
+    ips: 2.86,
     sks: 21,
     courses: [
-      ["COM 543", "Augmented Reality", 3, "A-", 3.75, 3.51],
-      ["STDL101", "Kuliah Kerja Nyata", 3, "A", 3.85, 3.52],
-      ["INTS110", "Sistem Rekomendasi", 3, "A-", 3.70, 3.52],
-      ["INTS204", "Pemrosesan Bahasa Alami (NLP)", 3, "A", 3.90, 3.53],
-      ["INMA109", "Analisis Proses Bisnis", 3, "B+", 3.60, 3.53],
-      ["INTS203", "Pemrosesan Citra", 3, "A-", 3.75, 3.53],
-      ["INMA108", "Kecerdasan Bisnis", 3, "B+", 3.60, 3.53],
+      ["COM 543", "Augmented Reality", 3, "B-", 3.00, 3.45],
+      ["STDL101", "Kuliah Kerja Nyata", 3, "A", 3.00, 3.27],
+      ["INTS110", "Sistem Rekomendasi", 3, "C+", 3.00, 3.47],
+      ["INTS204", "Pemrosesan Bahasa Alami (NLP)", 3, "B", 3.00, 3.35],
+      ["INMA109", "Analisis Proses Bisnis", 3, "A", 4.00, 3.28],
+      ["INTS203", "Pemrosesan Citra", 3, "A", 3.00, 3.54],
+      ["INMA108", "Kecerdasan Bisnis", 3, "E", 3.00, 3.52]
     ]
   },
   {
     number: 7,
     period: "2026/2027 Gasal",
-    ips: null,
-    sks: null,
-    courses: []
-  },
+    ips: 0.00,
+    sks: 0,
+    courses: [
+      ["INTS205", "Komputer Pelihat", 3, null, null, null],
+      ["SDEV207", "Desain UI/UX", 3, null, null, null],
+      ["MATS31W", "Metode Numerik", 2, null, null, null],
+      ["GEAI51P", "AI Generatif", 3, null, null, null],
+      ["PENL101", "Metodologi Penelitian", 4, null, null, null],
+      ["MATS21W", "Probabilitas Lanjut", 2, null, null, null],
+      ["NUTR054", "Neutrasetika", 2, null, null, null],
+      ["GRLE51P", "Pembelajaran Mesin Berbasis Graph", 3, null, null, null]
+    ]
+  }
 ];
 
 // ======================================
